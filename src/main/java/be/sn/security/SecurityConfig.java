@@ -34,13 +34,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
         // Desactivation des session
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-        http.authorizeRequests().antMatchers("/signup/**").permitAll();
+        http.authorizeRequests().antMatchers("/login/**").permitAll();
 
-        http.authorizeRequests().antMatchers(HttpMethod.POST, "/tasks/**").hasAuthority("ADMIN");
-        http.authorizeRequests().antMatchers(HttpMethod.GET, "/projects/**").hasAuthority("ADMIN");
+        http.authorizeRequests().antMatchers(HttpMethod.POST, "/projects/**", "/skills").hasAuthority("ADMIN");
+        http.authorizeRequests().antMatchers(HttpMethod.GET, "/projects/**", "/skills").permitAll();
         http.authorizeRequests().anyRequest().authenticated();
 
         /* Filter */
         http.addFilter(new JWTAuthenticationFilter(authenticationManager()));
+        http.addFilterBefore(new JWTAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);
     }
 }
