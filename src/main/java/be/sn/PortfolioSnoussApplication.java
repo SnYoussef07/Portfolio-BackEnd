@@ -18,7 +18,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
-//@SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
 @SpringBootApplication
 public class PortfolioSnoussApplication implements CommandLineRunner {
 
