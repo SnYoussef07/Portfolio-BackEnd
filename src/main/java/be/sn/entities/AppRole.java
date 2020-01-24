@@ -12,12 +12,9 @@ import javax.persistence.Id;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Skill {
+public class AppRole {
     @Id
     @GeneratedValue
     private Long id;
-    private String name;
-    private String category;
-    private String logo;
-    private boolean isFramework;
+    private String roleName;
 }
