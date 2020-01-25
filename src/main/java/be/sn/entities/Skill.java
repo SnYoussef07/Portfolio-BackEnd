@@ -19,5 +19,4 @@ public class Skill {
     private String name;
     private String category;
     private String logo;
-    private boolean isFramework;
 }
