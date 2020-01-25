@@ -23,7 +23,7 @@ public class SkillRestController {
     }
 
     @PostMapping("uploadLogoSkill/{id}")
-    public void addSkill(MultipartFile file, @PathVariable Long id) throws Exception {
+    public void uploadLogoSkill(MultipartFile file, @PathVariable Long id) throws Exception {
         Skill skill = skillRepository.findById(id).get();
         skill.setLogo(file.getOriginalFilename());
         Files.write(Paths.get(System.getProperty("user.home") + "/portfoliosn/skills/" + skill.getLogo()), file.getBytes());
@@ -38,7 +38,7 @@ public class SkillRestController {
     @GetMapping(path = "/logoSkill/{id}", produces = MediaType.IMAGE_PNG_VALUE)
     public byte[] getLogo(@PathVariable("id") Long id) throws Exception {
         Skill skill = skillRepository.findById(id).get();
-        return Files.readAllBytes(Paths.get(System.getProperty("user.home") + "/portfoliosn/skills" + skill.getLogo()));
+        return Files.readAllBytes(Paths.get(System.getProperty("user.home") + "/portfoliosn/skills/" + skill.getLogo()));
     }
 
 }

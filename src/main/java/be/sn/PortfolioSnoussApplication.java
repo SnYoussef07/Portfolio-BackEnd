@@ -50,10 +50,10 @@ public class PortfolioSnoussApplication implements CommandLineRunner {
 
         projectRepository.save(new Project(null, "Portfolio", "google.com", "image1.jpg", all));*/
 
-        accountService.saveUser(new AppUser(null, "admin", "1234", null));
+        /*accountService.saveUser(new AppUser(null, "admin", "1234", null));
 
         accountService.saveRole(new AppRole(null, "ADMIN"));
-        accountService.addRoleToUse("admin", "ADMIN");
+        accountService.addRoleToUse("admin", "ADMIN");*/
     }
 
 }
