@@ -7,6 +7,7 @@ import be.sn.entities.AppUser;
 import be.sn.entities.Project;
 import be.sn.entities.Skill;
 import be.sn.service.AccountService;
+import be.sn.service.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -27,6 +28,8 @@ public class PortfolioSnoussApplication implements CommandLineRunner {
     private ProjectRepository projectRepository;
     @Autowired
     private AccountService accountService;
+    @Autowired
+    private EmailService emailService;
 
     public static void main(String[] args) {
         SpringApplication.run(PortfolioSnoussApplication.class, args);
@@ -50,10 +53,10 @@ public class PortfolioSnoussApplication implements CommandLineRunner {
 
         projectRepository.save(new Project(null, "Portfolio", "google.com", "image1.jpg", all));*/
 
-        /*accountService.saveUser(new AppUser(null, "admin", "1234", null));
-
-        accountService.saveRole(new AppRole(null, "ADMIN"));
-        accountService.addRoleToUse("admin", "ADMIN");*/
+//        accountService.saveUser(new AppUser(null, "admin", "1234", null));
+//
+//        accountService.saveRole(new AppRole(null, "ADMIN"));
+//        accountService.addRoleToUse("admin", "ADMIN");
     }
 
 }

@@ -2,6 +2,7 @@ package be.sn.web;
 
 import be.sn.dao.SkillRepository;
 import be.sn.entities.Skill;
+import be.sn.service.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
