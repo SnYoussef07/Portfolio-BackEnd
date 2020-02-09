@@ -11,15 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class EmailSendController {
+
     @Autowired
     private EmailService emailService;
 
     @PostMapping("/sendEmail")
     public void sendEmail(@RequestBody SimpleMailMessage message) {
-        System.out.println(message.getTo()[0]);
-        System.out.println(message.getSubject());
-        System.out.println(message.getText());
-
         emailService.sendSimpleMessage(message.getTo()[0], message.getSubject(), message.getText());
     }
 }
