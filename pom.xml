@@ -10,7 +10,8 @@
     </parent>
     <groupId>be.sn</groupId>
     <artifactId>portfolio-snouss</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0</version>
+    <packaging>jar</packaging>
     <name>portfolio-snouss</name>
     <description>Portfolio snoussi youssef</description>
 

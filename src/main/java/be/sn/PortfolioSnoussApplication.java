@@ -42,19 +42,7 @@ public class PortfolioSnoussApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        /*Skill sk1 = skillRepository.save(new Skill(null, "Java", "Back-End", "logo1.png", false));
-        Skill sk2 = skillRepository.save(new Skill(null, "HTML", "HTML", "logo1.png", false));
-        Skill sk3 = skillRepository.save(new Skill(null, "React", "Javascript", "logo1.png", true));
-
-        List<Skill> all = new ArrayList<>();
-        all.add(sk1);
-        all.add(sk3);
-
-
-        projectRepository.save(new Project(null, "Portfolio", "google.com", "image1.jpg", all));*/
-
-//        accountService.saveUser(new AppUser(null, "admin", "1234", null));
-//
+//        accountService.saveUser(new AppUser(null, "admin", "admin", null));
 //        accountService.saveRole(new AppRole(null, "ADMIN"));
 //        accountService.addRoleToUse("admin", "ADMIN");
     }
